@@ -6,6 +6,7 @@ body {
     background: #0f0f0f;
     color: #e6e6e6;
     line-height: 1.7;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -29,32 +30,58 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ---------- PAGE LAYOUT ---------- */
-header {
+/* ---------- NAVIGATION BAR ---------- */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #111;
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    font-weight: 500;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 120px 20px 60px;
     background: linear-gradient(to right, #0f0f0f, #1a1a1a);
     border-bottom: 1px solid #222;
 }
 
+/* ---------- SECTIONS ---------- */
 section {
     width: 85%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
-/* ---------- LIST STYLE ---------- */
-ul, ol {
-    padding-left: 25px;
-}
-
-ul li, ol li {
-    margin-bottom: 10px;
-}
-
-/* ---------- PROJECT CARDS (OPTIONAL) ---------- */
-.project-card {
+/* ---------- CARDS ---------- */
+.card {
     background: #1b1b1b;
     border: 1px solid #262626;
     padding: 20px;
@@ -63,12 +90,38 @@ ul li, ol li {
     transition: 0.3s ease-in-out;
 }
 
+.card:hover {
+    border-color: #00c6ff;
+    transform: translateY(-5px);
+}
+
+/* ---------- PROJECT CARDS ---------- */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: #1b1b1b;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 calc(50% - 20px);
+    transition: 0.3s ease-in-out;
+}
+
 .project-card:hover {
     border-color: #00c6ff;
     transform: translateY(-5px);
 }
 
-/* ---------- FOOTER (OPTIONAL) ---------- */
+/* ---------- SKILLS LIST ---------- */
+.skills-list li {
+    margin-bottom: 8px;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
     margin-top: 40px;
     text-align: center;
@@ -79,14 +132,25 @@ footer {
 }
 
 /* ---------- MOBILE RESPONSIVE ---------- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero {
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 480px) {
     h1 {
         font-size: 24px;
     }
     h2 {
         font-size: 22px;
     }
-    section {
-        width: 92%;
-    }
 }
+
