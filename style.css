@@ -1,4 +1,4 @@
-/* ---------- GLOBAL STYLE ---------- */
+/* ---------- GLOBAL ---------- */
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -7,150 +7,109 @@ body {
     color: #e6e6e6;
     line-height: 1.7;
     scroll-behavior: smooth;
+    transition: background 0.3s, color 0.3s;
 }
 
-h1, h2, h3 {
-    font-weight: 600;
-    color: #ffffff;
+body.light-mode {
+    background: #f5f5f5;
+    color: #111;
 }
 
-h2 {
-    margin-top: 50px;
-    font-size: 28px;
-    border-left: 4px solid #00c6ff;
-    padding-left: 12px;
-}
+a { color: #00c6ff; text-decoration: none; }
+body.light-mode a { color: #007acc; }
+a:hover { text-decoration: underline; }
 
-a {
-    color: #00c6ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* ---------- NAVIGATION BAR ---------- */
+/* ---------- NAVBAR ---------- */
 nav {
     position: fixed;
     width: 100%;
-    top: 0;
     background: #111;
-    border-bottom: 1px solid #222;
+    top: 0;
     z-index: 1000;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 85%;
-    max-width: 1000px;
-    margin: auto;
-    padding: 15px 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav li {
-    display: inline;
-}
-
-nav a {
-    font-weight: 500;
-}
-
-/* ---------- HERO SECTION ---------- */
-.hero {
-    text-align: center;
-    padding: 120px 20px 60px;
-    background: linear-gradient(to right, #0f0f0f, #1a1a1a);
     border-bottom: 1px solid #222;
+    transition: background 0.3s;
 }
+body.light-mode nav { background: #fff; border-color: #ddd; }
+
+.nav-container { display: flex; justify-content: space-between; align-items: center; width: 85%; max-width: 1200px; margin: auto; padding: 15px 0; }
+nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
+nav li { display: inline; }
+.toggle-btn { cursor: pointer; background: none; border: none; color: #00c6ff; font-size: 18px; }
+body.light-mode .toggle-btn { color: #007acc; }
+
+/* ---------- HERO ---------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+    transition: background 0.3s;
+}
+body.light-mode .hero { background: linear-gradient(135deg, #e0e0e0, #ccc); }
+
+.hero h1 { font-size: 48px; margin-bottom: 10px; }
+.hero h2 { font-size: 24px; color: #00c6ff; margin-bottom: 15px; }
+body.light-mode .hero h2 { color: #007acc; }
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00c6ff;
+    margin-bottom: 20px;
+}
+body.light-mode .profile-photo { border-color: #007acc; }
+
+.cv-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00c6ff;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+body.light-mode .cv-btn { background: #007acc; color: #fff; }
+.cv-btn:hover { transform: translateY(-2px); }
+
+/* ---------- SOCIAL ICONS ---------- */
+.social-icons { margin-top: 15px; display: flex; gap: 15px; justify-content: center; }
+.social-icons a { padding: 8px 12px; border-radius: 6px; background: #1b1b1b; transition: 0.3s; }
+.social-icons a:hover { background: #00c6ff; color: #fff; }
+body.light-mode .social-icons a { background: #ddd; color: #111; }
+body.light-mode .social-icons a:hover { background: #007acc; color: #fff; }
 
 /* ---------- SECTIONS ---------- */
-section {
-    width: 85%;
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 0;
-}
+section { width: 85%; max-width: 1000px; margin: auto; padding: 80px 0; }
 
-/* ---------- CARDS ---------- */
-.card {
-    background: #1b1b1b;
-    border: 1px solid #262626;
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px 0;
-    transition: 0.3s ease-in-out;
-}
-
-.card:hover {
-    border-color: #00c6ff;
-    transform: translateY(-5px);
-}
+/* ---------- TIMELINE ---------- */
+.timeline { border-left: 3px solid #00c6ff; margin-left: 20px; padding-left: 20px; }
+body.light-mode .timeline { border-color: #007acc; }
+.timeline-item { margin-bottom: 30px; }
+.timeline-item h3 { margin-bottom: 5px; }
+.timeline-item span { color: #888; font-size: 14px; }
 
 /* ---------- PROJECT CARDS ---------- */
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+.projects-container { display: flex; flex-wrap: wrap; gap: 20px; }
+.project-card { background: #1b1b1b; border: 1px solid #262626; padding: 20px; border-radius: 12px; flex: 1 1 calc(50% - 20px); transition: 0.3s ease-in-out; }
+.project-card:hover { border-color: #00c6ff; transform: translateY(-5px); }
+body.light-mode .project-card { background: #f5f5f5; border-color: #ddd; }
 
-.project-card {
-    background: #1b1b1b;
-    border: 1px solid #262626;
-    border-radius: 12px;
-    padding: 20px;
-    flex: 1 1 calc(50% - 20px);
-    transition: 0.3s ease-in-out;
-}
-
-.project-card:hover {
-    border-color: #00c6ff;
-    transform: translateY(-5px);
-}
-
-/* ---------- SKILLS LIST ---------- */
-.skills-list li {
-    margin-bottom: 8px;
-}
+/* ---------- SKILLS ---------- */
+.skills-container { display: flex; flex-direction: column; gap: 15px; }
+.skill p { margin: 0 0 5px; }
+.skill-bar { height: 12px; background: #00c6ff; border-radius: 8px; }
+body.light-mode .skill-bar { background: #007acc; }
 
 /* ---------- FOOTER ---------- */
-footer {
-    margin-top: 40px;
-    text-align: center;
-    padding: 15px 0;
-    background: #111;
-    color: #aaa;
-    font-size: 14px;
-}
+footer { text-align: center; padding: 20px; background: #111; color: #aaa; font-size: 14px; transition: background 0.3s, color 0.3s; }
+body.light-mode footer { background: #fff; color: #111; }
 
-/* ---------- MOBILE RESPONSIVE ---------- */
-@media (max-width: 768px) {
-    .projects-container {
-        flex-direction: column;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .hero {
-        padding-top: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px;
-    }
-    h2 {
-        font-size: 22px;
-    }
-}
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) { .projects-container { flex-direction: column; } nav ul { flex-direction: column; gap: 10px; } }
+@media (max-width: 480px) { .hero h1 { font-size: 32px; } .hero h2 { font-size: 18px; } }
 
