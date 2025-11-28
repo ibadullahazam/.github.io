@@ -1,12 +1,92 @@
+/* ---------- GLOBAL STYLE ---------- */
 body {
-    font-family: Arial;
-    margin: 40px;
-    line-height: 1.6;
-}
-h1 {
-    color: #333;
-}
-h2 {
-    color: #555;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0f0f0f;
+    color: #e6e6e6;
+    line-height: 1.7;
 }
 
+h1, h2, h3 {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 28px;
+    border-left: 4px solid #00c6ff;
+    padding-left: 12px;
+}
+
+a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- PAGE LAYOUT ---------- */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+    border-bottom: 1px solid #222;
+}
+
+section {
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* ---------- LIST STYLE ---------- */
+ul, ol {
+    padding-left: 25px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+/* ---------- PROJECT CARDS (OPTIONAL) ---------- */
+.project-card {
+    background: #1b1b1b;
+    border: 1px solid #262626;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    transition: 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    border-color: #00c6ff;
+    transform: translateY(-5px);
+}
+
+/* ---------- FOOTER (OPTIONAL) ---------- */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px 0;
+    background: #111;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    section {
+        width: 92%;
+    }
+}
