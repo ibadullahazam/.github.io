@@ -1,146 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ibad Ullah Azam - AI & Data Science Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibad Ullah Azam - AI & Data Science Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
 
-    <!-- ===== NAVIGATION BAR ===== -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Ibad Ullah Azam</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">Ibad Ullah Azam</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="toggle-btn" onclick="toggleMode()">🌙</button></li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- ===== HERO SECTION ===== -->
-    <header class="hero">
-        <h1>Ibad Ullah Azam</h1>
-        <h3>AI Researcher | Data Scientist | Medical Imaging | Computer Vision</h3>
-        <p>Email: <a href="mailto:ibadullahazamchd@gmail.com">ibadullahazamchd@gmail.com</a> | Phone: +82 10 6801 3177</p>
-    </header>
+<!-- ===== HERO SECTION ===== -->
+<header class="hero">
+  <div class="hero-content">
+    <img src="profile.jpg" alt="Ibad Ullah Azam" class="profile-photo">
+    <h1>Ibad Ullah Azam</h1>
+    <h2 class="typed-roles"></h2>
+    <p>Email: <a href="mailto:ibadullahazamchd@gmail.com">ibadullahazamchd@gmail.com</a> | Phone: +82 10 6801 3177</p>
+    <a href="Ibad_Ullah_Azam_CV.pdf" class="cv-btn" download>Download CV</a>
+    <div class="social-icons">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=yourid" target="_blank">Google Scholar</a>
+    </div>
+  </div>
+</header>
 
-    <!-- ===== ABOUT SECTION ===== -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a Computer Engineering (AI major) Master’s graduate with 1.5+ years experience as a Junior Data Scientist. 
-            Passionate about AI, NLP, Computer Vision, Medical Imaging, and Intelligent Systems. I build impactful 
-            solutions using machine learning, deep learning, and agentic AI.
-        </p>
-    </section>
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Master’s graduate in Computer Engineering (AI major) with 1.5+ years of experience as a Junior Data Scientist.
+    Passionate about AI, NLP, Medical Imaging, and Intelligent Systems. I leverage deep learning, generative AI, 
+    and multi-agent AI to create impactful solutions for real-world applications.
+  </p>
+</section>
 
-    <!-- ===== EXPERIENCE SECTION ===== -->
-    <section id="experience">
-        <h2>Professional Experience</h2>
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Research Assistant — Inje University, South Korea</h3>
+      <span>Mar 2024 – Present</span>
+      <ul>
+        <li>Contributed to 9 research publications in medical imaging, generative AI, and multi-agent AI.</li>
+        <li>Built multi-pathway suspicious activity recognition system (YOLOv11 + Pose Estimation + I3D CNNs).</li>
+        <li>Taught and mentored students on ML pipelines, LLM systems, and medical imaging research.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <h3>Junior Data Scientist — Inbox Business Technologies, Pakistan</h3>
+      <span>Jul 2022 – Feb 2024</span>
+      <ul>
+        <li>Analyzed datasets to provide actionable insights for Telecom, Government, and Enterprise sectors.</li>
+        <li>Optimized virtualized environments (VMware ESXi, OLVM).</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <h3>Research Assistant — UET Peshawar, Pakistan</h3>
+      <span>Jan 2021 – Jun 2022</span>
+      <ul>
+        <li>Designed and simulated OFETs using MATLAB for low-power green technology.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-        <div class="card">
-            <h3>Research Assistant — Inje University, South Korea (Mar 2024 – Present)</h3>
-            <ul>
-                <li>Contributed to 9 research publications in AI, Computer Vision, Generative AI, and Multi-Agent AI.</li>
-                <li>Built multi-pathway suspicious activity recognition framework (YOLOv11 + pose estimation + I3D CNNs).</li>
-                <li>Taught and mentored students in deep learning, LLM systems, and medical imaging research.</li>
-            </ul>
-        </div>
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Suspicious Human Activity Recognition</h3>
+      <p>Multi-pathway video-based intrusion detection using YOLOv11, pose estimation, and I3D CNNs.</p>
+    </div>
+    <div class="project-card">
+      <h3>Auto Manga Generation</h3>
+      <p>Text-to-image diffusion model combined with multi-agent LLMs for story refinement and generation.</p>
+    </div>
+    <div class="project-card">
+      <h3>Skin Cancer Classification</h3>
+      <p>Vision Transformer with UNI foundation model achieving 97% accuracy on ISIC 2020 dataset.</p>
+    </div>
+    <div class="project-card">
+      <h3>Multi-Agent Real-Time Startup Analysis</h3>
+      <p>CrewAI + ChromaDB vector database system with 58.6% performance improvement.</p>
+    </div>
+    <div class="project-card">
+      <h3>Facial Emotion Recognition</h3>
+      <p>DenseNet121 CNN achieving 92.09% accuracy on 10,000 image dataset.</p>
+    </div>
+  </div>
+</section>
 
-        <div class="card">
-            <h3>Junior Data Scientist — Inbox Business Technologies, Pakistan (Jul 2022 – Feb 2024)</h3>
-            <ul>
-                <li>Analyzed complex datasets and provided actionable insights for Telecom, Government, and Enterprise sectors.</li>
-                <li>Optimized virtualized environments (VMware ESXi, OLVM).</li>
-            </ul>
-        </div>
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill">
+      <p>Python / PyTorch / TensorFlow</p>
+      <div class="skill-bar" style="width: 90%;"></div>
+    </div>
+    <div class="skill">
+      <p>Computer Vision (OpenCV, YOLO, Pose Estimation)</p>
+      <div class="skill-bar" style="width: 85%;"></div>
+    </div>
+    <div class="skill">
+      <p>Generative AI & Multi-Agent Systems</p>
+      <div class="skill-bar" style="width: 80%;"></div>
+    </div>
+    <div class="skill">
+      <p>Medical Imaging / Radiogenomics</p>
+      <div class="skill-bar" style="width: 85%;"></div>
+    </div>
+  </div>
+</section>
 
-        <div class="card">
-            <h3>Research Assistant — UET Peshawar, Pakistan (Jan 2021 – Jun 2022)</h3>
-            <ul>
-                <li>Designed and optimized Organic Field-Effect Transistors (OFETs) using MATLAB simulations.</li>
-                <li>Worked on low-power green technology and efficiency improvement.</li>
-            </ul>
-        </div>
-    </section>
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>M.S. Computer Engineering (AI) — Inje University, South Korea</h3>
+      <span>2024 – 2026</span>
+      <p>Thesis: Multi-pathway deep learning for real-time human activity recognition.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>B.S. Electrical Engineering — UET Peshawar, Pakistan</h3>
+      <span>2016 – 2020</span>
+    </div>
+  </div>
+</section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section id="projects">
-        <h2>Projects</h2>
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ibadullahazamchd@gmail.com">ibadullahazamchd@gmail.com</a></p>
+  <p>Phone: +82 10 6801 3177</p>
+  <div class="social-icons">
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=yourid" target="_blank">Google Scholar</a>
+  </div>
+</section>
 
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Suspicious Human Activity Recognition (Master’s Thesis)</h3>
-                <p>Video-based intrusion detection using YOLOv11, pose estimation, and I3D CNNs with late fusion.</p>
-            </div>
+<footer>
+  &copy; 2025 Ibad Ullah Azam | AI & Data Science Portfolio
+</footer>
 
-            <div class="project-card">
-                <h3>Auto Manga Generation</h3>
-                <p>Multi-agent LLM pipeline + text-to-image diffusion model for manga creation.</p>
-            </div>
+<script>
+  var typed = new Typed('.typed-roles', {
+    strings: ["AI Researcher", "Data Scientist", "Computer Vision", "Medical Imaging"],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true
+  });
 
-            <div class="project-card">
-                <h3>Skin Cancer Classification</h3>
-                <p>Vision Transformer (ViT) with UNI foundation model; 97% accuracy on ISIC 2020 dataset.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Multi-Agent Real-Time Startup Analysis</h3>
-                <p>CrewAI + ChromaDB system achieving 58.6% performance gain (Published KICCE 2025).</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Facial Emotion Recognition</h3>
-                <p>DenseNet121 CNN model achieving 92.09% accuracy (Published KICCE 2024).</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SKILLS SECTION ===== -->
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul class="skills-list">
-            <li><b>Generative AI:</b> Stable Diffusion 3.5, FLUX.1, LoRA</li>
-            <li><b>Multi-Agent AI:</b> CrewAI, AutoGen, LangGraph</li>
-            <li><b>Medical AI:</b> MRI, BCBM tumor classification, radiogenomics</li>
-            <li><b>Computer Vision:</b> OpenCV, Scikit-image, YOLOv11/12, pose estimation, 3D CNNs</li>
-            <li><b>Programming:</b> Python, PyTorch, TensorFlow, JavaScript, SQL, MATLAB</li>
-            <li><b>Web:</b> HTML, CSS, Flask</li>
-            <li><b>Data Science:</b> Pandas, NumPy, SciPy, Scikit-Learn</li>
-        </ul>
-    </section>
-
-    <!-- ===== EDUCATION SECTION ===== -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="card">
-            <h3>M.S. Computer Engineering (AI) — Inje University, South Korea (2024–2026)</h3>
-            <p>Thesis: Multi-pathway deep learning for real-time human activity recognition.</p>
-        </div>
-        <div class="card">
-            <h3>B.S. Electrical Engineering — UET Peshawar, Pakistan (2016–2020)</h3>
-        </div>
-    </section>
-
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:ibadullahazamchd@gmail.com">ibadullahazamchd@gmail.com</a></p>
-        <p>Phone: +82 10 6801 3177</p>
-        <p>Add LinkedIn, GitHub, or Google Scholar links here.</p>
-    </section>
-
-    <footer>
-        &copy; 2025 Ibad Ullah Azam | AI & Data Science Portfolio
-    </footer>
+  function toggleMode() {
+    document.body.classList.toggle('light-mode');
+    const btn = document.querySelector('.toggle-btn');
+    btn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+  }
+</script>
 
 </body>
 </html>
+
 
 
